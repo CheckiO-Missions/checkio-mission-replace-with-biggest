@@ -1,0 +1,46 @@
+<!-- Describe task in general -->
+
+<p>
+    You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %} <b class="code">data</b>. Replace every element in it with the biggest element among the elements to its strict right (not including current element). The last element should be replaced with <b class="code">-1</b>. Return modified sequence as any Iterable.  
+</p>
+<p>
+    Take a look at the following example:
+    <pre class="brush: python">
+data = [17, 18, 5, 4, 6, 1]
+data1 = list(replace_biggest(data))
+print(data1)
+    </pre>
+    <div class="output">
+        <p><b>Output:</b></p>
+        <pre>
+[18, 6, 6, 6, 1, -1]
+        </pre>
+    </div>
+</p>
+<p>
+    Explanation:
+<ul>
+    <li><b class="code">data1[0]</b> --> the greatest element to the right of <b class="code">data[0]</b> is element at index <b class="code">1</b> - <b class="code">18</b>;</li>
+    <li><b class="code">data1[1]</b> --> -//- at index <b class="code">4</b> - <b class="code">6</b>;</li>
+    <li><b class="code">data1[2]</b> --> -//- at index <b class="code">4</b> - <b class="code">6</b>;</li>
+    <li><b class="code">data1[3]</b> --> -//- at index <b class="code">4</b> - <b class="code">6</b>;</li>
+    <li><b class="code">data1[4]</b> --> -//- at index <b class="code">5</b> - <b class="code">1</b>;</li>
+    <li><b class="code">data1[5]</b> --> there are no elements to the right of element with index <b class="code">5</b>, so we put <b class="code">-1</b>.</li>
+</ul>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> {% if is_js %}An Array of numbers{% else %}A list of integers{% endif %}.
+</p>
+
+<p>
+    <strong>Output:</strong> {% if is_js %}An Array of numbers{% else %}A list  or another Iterable (tuple, iterator, generator) of integers{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>

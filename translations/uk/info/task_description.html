@@ -1,0 +1,46 @@
+<!-- Describe task in general -->
+
+<p>
+    Тобі дано {% if is_js %}масив{% else %}список{% endif %} цілих чисел <b class="code">data</b>. Заміни кожен елемент у ньому найбільшим елементом серед елементів праворуч (не враховуючи поточний елемент). Останній елемент повинен бути замінений на <b class="code">-1</b>. Поверни модифіковану послідовність як ітеративний об'єкт.  
+</p>
+<p>
+    Поглянь на наступний приклад:
+    <pre class="brush: python">
+data = [17, 18, 5, 4, 6, 1]
+data1 = list(replace_biggest(data))
+print(data1)
+    </pre>
+    <div class="output">
+        <p><b>Вивід:</b></p>
+        <pre>
+[18, 6, 6, 6, 1, -1]
+        </pre>
+    </div>
+</p>
+<p>
+    Пояснення:
+<ul>
+    <li><b class="code">data1[0]</b> --> найбільший елемент праворуч від <b class="code">data[0]</b> це елемент з індексом <b class="code">1</b> - <b class="code">18</b>;</li>
+    <li><b class="code">data1[1]</b> --> -//- з індексом <b class="code">4</b> - <b class="code">6</b>;</li>
+    <li><b class="code">data1[2]</b> --> -//- з індексом <b class="code">4</b> - <b class="code">6</b>;</li>
+    <li><b class="code">data1[3]</b> --> -//- з індексом <b class="code">4</b> - <b class="code">6</b>;</li>
+    <li><b class="code">data1[4]</b> --> -//- з індексом <b class="code">5</b> - <b class="code">1</b>;</li>
+    <li><b class="code">data1[5]</b> --> немає елемента праворуч від елемента з індексом <b class="code">5</b>, тому ти пишеш <b class="code">-1</b>.</li>
+</ul>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Вхідні дані:</strong> {% if is_js %}Масив{% else %}Список{% endif %} цілих чисел.
+</p>
+
+<p>
+    <strong>Вихідні дані:</strong> {% if is_js %}Масив цілих чисел{% else %}Список або інший ітеративний об'єкт (кортеж, ітератор, генератор) з цілих чисел{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
