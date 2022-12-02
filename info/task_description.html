@@ -1,21 +1,13 @@
 <!-- Describe task in general -->
 
 <p>
-    You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %} <b class="code">data</b>. Replace every element in it with the biggest element among the elements to its strict right (not including current element). The last element should be replaced with <b class="code">-1</b>. Return modified sequence as any Iterable.  
+    You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %} <b class="code">data</b>. Replace every element in it with the biggest element among the elements to its strict right (not including current element). The last element should be replaced with <b class="code">-1</b>. Return modified sequence as {% if is_js %}Array of numbers{% else %}any Iterable{% endif %}.  
 </p>
 <p>
     Take a look at the following example:
-    <pre class="brush: python">
-data = [17, 18, 5, 4, 6, 1]
-data1 = list(replace_biggest(data))
-print(data1)
-    </pre>
-    <div class="output">
-        <p><b>Output:</b></p>
-        <pre>
-[18, 6, 6, 6, 1, -1]
-        </pre>
-    </div>
+<pre>
+[17, 18, 5, 4, 6, 1] -> [18, 6, 6, 6, 1, -1]
+</pre>
 </p>
 <p>
     Explanation:
